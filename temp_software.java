@@ -1,0 +1,27 @@
+function tempChanger(){
+    var outsideTemp = readInt("What is the temp?");
+    var thermostat =65;
+    var overRide = readBoolean("Would you like to overide(enter true or false)");
+    if(overRide == true){
+        var overRideTemp = readInt("What temp you would like to enter?");
+         thermostat = overRideTemp;
+         if(overRideTemp <= 0 || overRideTemp >= 100 ){
+             console.log("Please relaunch program and enter a proper temp");
+            tempChanger();
+         }
+    }else if(outsideTemp >= 100){
+        thermostat = 60;
+    }else if (outsideTemp = 100 || outsideTemp > 80){
+        thermostat = 75; 
+        
+    }else if (outsideTemp = 80 || outsideTemp > 70){
+        thermostat = 75; 
+    }else if (outsideTemp = 70 || outsideTemp > 60){
+        thermostat = 75; 
+    }else if (outsideTemp > 60){
+        thermostat = 75; 
+    }else{
+        console.log("error");
+    }
+    console.log("The thermostat is now at:" + thermostat);
+}
